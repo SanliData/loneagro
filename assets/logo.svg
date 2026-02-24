@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" shape-rendering="geometricPrecision">
+  <path fill="#2E8B3E" fill-rule="nonzero" d="M 85,42 Q 100,28 120,32 L 135,32 L 135,58 L 165,58 L 195,70 L 225,88 L 255,118 L 272,158 L 278,198 L 268,238 L 248,268 L 218,288 L 178,296 L 138,292 L 98,272 L 68,238 L 48,188 L 42,128 L 52,78 L 72,48 Q 80,38 85,42 Z"/>
+  <path fill="#FFFFFF" fill-rule="nonzero" d="M 200,118 L 218,158 L 262,158 L 224,184 L 238,228 L 200,202 L 162,228 L 176,184 L 138,158 L 182,158 Z"/>
+  <text x="200" y="288" text-anchor="middle" font-family="Inter,sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="0.08em">LONE STAR AGRO</text>
+  <text x="200" y="308" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="400" fill="#FFFFFF">Landscape Architect Maintenance</text>
+</svg>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Lonestar Agro | Texas</title>
+  <meta name="description" content="Lonestar Agro: Texas-rooted, scalable agricultural and land management. Operational discipline, long-term contracts, and leadership with deep field experience across commercial and municipal projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #0d0d0d;
+      --color-surface: #161616;
+      --color-surface-elevated: #1c1c1c;
+      --color-text: #f5f5f5;
+      --color-text-muted: #a3a3a3;
+      --color-accent: #c9a227;
+      --color-accent-hover: #d4af37;
+      --color-border: #2a2a2a;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --container: min(1200px, 100% - 3rem);
+      --section-padding: clamp(4rem, 10vw, 6rem);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.6; color: var(--color-text); background: var(--color-bg); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: rgba(13, 13, 13, 0.92); border-bottom: 1px solid var(--color-border); backdrop-filter: blur(12px); }
+    .nav-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .logo { display: flex; align-items: center; }
+    .logo img { height: 40px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a { color: var(--color-text-muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--color-text); }
+    .nav-cta { display: inline-block; padding: 0.6rem 1.25rem; background: var(--color-accent); color: var(--color-bg); font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--color-accent-hover); color: var(--color-bg); }
+
+    .service-hero { padding: calc(80px + var(--section-padding)) var(--section-padding) var(--section-padding); background: var(--color-bg); position: relative; overflow: hidden; }
+    .service-hero::after { content: ''; position: absolute; inset: 0; background: url('assets/images/courtyard.png') center/cover no-repeat; z-index: 0; }
+    .service-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13, 13, 13, 0.82) 0%, rgba(13, 13, 13, 0.78) 100%); z-index: 1; pointer-events: none; }
+    .hero-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; position: relative; z-index: 2; }
+    .service-hero .hero-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem; }
+    .service-hero .hero-headline { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.15; margin: 0 0 1.5rem; color: var(--color-text); max-width: none; }
+    .service-hero .hero-sub { font-size: clamp(1rem, 1.5vw, 1.125rem); color: var(--color-text-muted); max-width: 42rem; margin: 0 0 2rem; line-height: 1.65; }
+    .service-hero .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    .btn-primary { display: inline-block; padding: 1rem 2rem; background: var(--color-accent); color: var(--color-bg); font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--color-accent-hover); color: var(--color-bg); }
+    .btn-secondary { display: inline-block; padding: 1rem 2rem; background: transparent; color: var(--color-text); font-weight: 600; font-size: 1rem; border: 1px solid var(--color-border); cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+    .btn-secondary:hover { border-color: var(--color-text-muted); color: var(--color-text); }
+
+    .trust-bar { padding: 2rem var(--section-padding); background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+    .trust-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+    .trust-stat { font-size: 0.875rem; font-weight: 600; color: var(--color-text-muted); letter-spacing: 0.03em; }
+    .trust-stat strong { color: var(--color-text); }
+
+    section { padding: var(--section-padding) 0; }
+    .section-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+    .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400; margin: 0 0 0.75rem; color: var(--color-text); }
+    .section-sub { margin: 0; color: var(--color-text-muted); font-size: 1rem; }
+
+    /* ----- Story ----- */
+    .about-story { background: var(--color-bg); }
+    .about-story .section-inner { max-width: 42rem; }
+    .about-story p { color: var(--color-text-muted); line-height: 1.7; margin: 0 0 1.25rem; font-size: 1.0625rem; }
+    .about-story p:last-child { margin-bottom: 0; }
+
+    /* ----- Mission, vision, values ----- */
+    .mvv { background: var(--color-surface); }
+    .mvv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+    @media (max-width: 800px) { .mvv-grid { grid-template-columns: 1fr; } }
+    .mvv-item {
+      padding: 2rem;
+      background: var(--color-surface-elevated);
+      border: 1px solid var(--color-border);
+    }
+    .mvv-item h3 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.75rem; }
+    .mvv-item p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.65; }
+    .mvv-values ul { margin: 0.75rem 0 0; padding: 0; list-style: none; }
+    .mvv-values li { padding: 0.4rem 0; padding-left: 1.25rem; position: relative; color: var(--color-text-muted); font-size: 0.9rem; }
+    .mvv-values li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 4px; height: 4px; background: var(--color-accent); }
+
+    /* ----- Leadership ----- */
+    .leadership { background: var(--color-bg); }
+    .leadership-exec-header { margin-bottom: 1rem; }
+    .leadership-exec-header .section-title { margin-bottom: 0.35rem; }
+    .leadership-exec-sub { font-size: 1.05rem; color: var(--color-accent); font-weight: 600; letter-spacing: 0.02em; margin: 0; }
+    .leadership-intro { max-width: 42rem; margin-bottom: 3rem; color: var(--color-text-muted); line-height: 1.7; font-size: 1rem; }
+    .leadership-profile {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .leadership-profile:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    @media (max-width: 640px) { .leadership-profile { grid-template-columns: 1fr; gap: 1.5rem; } }
+    .leadership-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 220px;
+      background: var(--color-surface-elevated);
+      background-image: linear-gradient(135deg, var(--color-surface-elevated) 0%, var(--color-border) 100%);
+    }
+    .leadership-profile-body .leadership-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin: 0 0 0.25rem; color: var(--color-text); }
+    .leadership-profile-body .leadership-title { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 1rem; }
+    .leadership-summary { margin: 0 0 1.25rem; color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.65; }
+    .leadership-focus-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-muted); margin: 0 0 0.75rem; }
+    .leadership-focus { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.35rem 2rem; list-style: none; margin: 0 0 1.25rem; padding: 0; }
+    @media (max-width: 500px) { .leadership-focus { grid-template-columns: 1fr; } }
+    .leadership-focus li { font-size: 0.9rem; color: var(--color-text-muted); padding-left: 1rem; position: relative; }
+    .leadership-focus li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 4px; height: 4px; background: var(--color-accent); }
+    .leadership-strength { margin: 0; padding: 1rem 0 0; border-top: 1px solid var(--color-border); font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.65; }
+    .leadership-cv-links { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .leadership-cv-links a { font-size: 0.875rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem; }
+    .leadership-cv-links a.cv-view { color: var(--color-accent); }
+    .leadership-cv-links a.cv-view:hover { text-decoration: underline; }
+    .leadership-cv-links a.cv-download { padding: 0.5rem 1rem; background: var(--color-surface-elevated); border: 1px solid var(--color-border); color: var(--color-text); }
+    .leadership-cv-links a.cv-download:hover { border-color: var(--color-accent); color: var(--color-accent); }
+    .leadership-philosophy {
+      margin-top: 3rem;
+      padding: 2.5rem 0;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+    .leadership-philosophy .section-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+    .leadership-philosophy .section-title { margin-bottom: 1rem; }
+    .leadership-philosophy p { margin: 0 0 1rem; color: var(--color-text-muted); line-height: 1.65; }
+    .leadership-philosophy ul { margin: 0; padding: 0 0 0 1.25rem; color: var(--color-text-muted); line-height: 1.7; }
+    .leadership-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+    }
+    @media (max-width: 600px) { .leadership-metrics { grid-template-columns: 1fr; } }
+    .leadership-metrics-item { text-align: center; }
+    .leadership-metrics-item .metric-value { font-family: var(--font-display); font-size: 1.75rem; color: var(--color-accent); }
+    .leadership-metrics-item .metric-label { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 0.25rem; }
+
+    /* ----- By the numbers ----- */
+    .numbers { background: var(--color-surface); }
+    .numbers-grid { display: flex; flex-wrap: wrap; gap: 2rem 3rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
+    .numbers-item .num { font-family: var(--font-display); font-size: 2rem; font-weight: 400; color: var(--color-accent); line-height: 1.2; }
+    .numbers-item .num-label { font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.25rem; }
+
+    /* ----- CTA ----- */
+    .cta-block { background: var(--color-bg); padding: var(--section-padding) 0; }
+    .cta-block-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; text-align: center; }
+    .cta-block .section-title { margin: 0 auto 0.75rem; }
+    .cta-block .section-sub { margin: 0 auto 2rem; max-width: 36rem; }
+    .cta-block .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+    .footer { background: var(--color-surface); border-top: 2px solid var(--color-accent); }
+    .footer__top { padding: 3.5rem var(--section-padding) 2.5rem; max-width: var(--container); margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; display: grid; grid-template-columns: 1.5fr 1fr 1.2fr 1fr 1.3fr; gap: 2.5rem 2rem; align-items: start; }
+    @media (max-width: 1100px) { .footer__top { grid-template-columns: 1fr 1fr 1fr; } }
+    @media (max-width: 700px) { .footer__top { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2.5rem 1.5rem; } }
+    @media (max-width: 480px) { .footer__top { grid-template-columns: 1fr; } }
+    .footer__brand .logo { display: inline-block; margin-bottom: 0.5rem; }
+    .footer__brand .logo img { height: 36px; width: auto; }
+    .footer__brand-tagline { font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.5; margin: 0; max-width: 20rem; }
+    .footer__col-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-text-muted); margin: 0 0 1rem; }
+    .footer__col ul { list-style: none; margin: 0; padding: 0; }
+    .footer__col li { margin: 0 0 0.5rem; }
+    .footer__col a { font-size: 0.875rem; color: var(--color-text-muted); transition: color 0.2s; }
+    .footer__col a:hover { color: var(--color-text); }
+    .footer__contact-item { font-size: 0.875rem; color: var(--color-text-muted); margin: 0 0 0.4rem; }
+    .footer__contact-item a { color: var(--color-text); font-weight: 500; }
+    .footer__contact-item a:hover { color: var(--color-accent); }
+    .footer__wa-cta { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; padding: 0.5rem 1rem; background: #25D366; color: #fff; font-size: 0.8125rem; font-weight: 600; border-radius: 50px; transition: background 0.2s, transform 0.2s; }
+    .footer__wa-cta:hover { background: #20bd5a; color: #fff; transform: translateY(-1px); }
+    .footer__wa-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .footer__newsletter { margin-top: 0.25rem; }
+    .footer__newsletter p { font-size: 0.8125rem; color: var(--color-text-muted); margin: 0 0 0.75rem; line-height: 1.4; }
+    .footer__newsletter-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .footer__newsletter-form input { flex: 1; min-width: 140px; padding: 0.6rem 0.75rem; font-family: var(--font-body); font-size: 0.875rem; color: var(--color-text); background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 0; }
+    .footer__newsletter-form input::placeholder { color: var(--color-text-muted); }
+    .footer__newsletter-form input:focus { outline: none; border-color: var(--color-accent); }
+    .footer__newsletter-form button { padding: 0.6rem 1rem; font-family: var(--font-body); font-size: 0.8125rem; font-weight: 600; background: var(--color-accent); color: var(--color-bg); border: none; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+    .footer__newsletter-form button:hover { background: var(--color-accent-hover); }
+    .footer__social-locations { padding: 1.5rem 1.5rem 1.25rem; max-width: var(--container); margin: 0 auto; border-top: 1px solid var(--color-border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+    .footer__social { display: flex; align-items: center; gap: 1rem; }
+    .footer__social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--color-border); color: var(--color-text-muted); transition: color 0.2s, border-color 0.2s; }
+    .footer__social a:hover { color: var(--color-accent); border-color: var(--color-accent); }
+    .footer__social a svg { width: 18px; height: 18px; }
+    .footer__locations { font-size: 0.8125rem; color: var(--color-text-muted); }
+    .footer__locations a { color: var(--color-text-muted); }
+    .footer__locations a:hover { color: var(--color-text); }
+    .footer__bottom { padding: 1rem 1.5rem; max-width: var(--container); margin: 0 auto; border-top: 1px solid var(--color-border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+    .footer__legal { display: flex; gap: 1.5rem; font-size: 0.8rem; }
+    .footer__legal a { color: var(--color-text-muted); }
+    .footer__legal a:hover { color: var(--color-text); }
+    .footer__copy { font-size: 0.8rem; color: var(--color-text-muted); margin: 0; }
+
+    .wa-float { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; pointer-events: none; }
+    .wa-float__link { pointer-events: auto; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 56px; height: 56px; padding: 0; background: #25D366; color: #fff; border-radius: 50%; box-shadow: 0 2px 12px rgba(37, 211, 102, 0.35); transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease; }
+    .wa-float__link:hover { transform: scale(1.1) translateY(-2px); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5); background: #20bd5a; color: #fff; }
+    .wa-float__icon { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; }
+    .wa-float__icon svg { width: 100%; height: 100%; }
+    .wa-float__label { font-size: 0.8125rem; font-weight: 600; white-space: nowrap; padding-right: 0.5rem; }
+    @media (min-width: 520px) { .wa-float__link { width: auto; height: auto; min-width: 56px; min-height: 56px; padding: 0 1rem 0 0.6rem; border-radius: 50px; } }
+    @media (max-width: 519px) { .wa-float__label { display: none; } .wa-float { bottom: 1.25rem; right: 1.25rem; } }
+  </style>
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Ana sayfa"><img src="assets/logo.png" alt="Lone Star Agro - Landscape Architect Maintenance" /></a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries-served.html">Industries Served</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="safety-compliance.html">Safety & Compliance</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="locations.html">Locations</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span aria-hidden="true">&#9776;</span></button>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="service-hero">
+      <div class="hero-inner">
+        <p class="hero-label">About Us</p>
+        <h1 class="hero-headline">About Lonestar Agro</h1>
+        <p class="hero-sub">Texas-rooted and built to scale. We deliver agricultural and land management through operational discipline, long-term contracts, and leadership with deep field experience. Commercial and municipal partners rely on us for consistency, compliance, and execution.</p>
+        <div class="hero-ctas">
+          <a href="contact.html" class="btn-primary">Request a Quote</a>
+          <a href="contact.html" class="btn-secondary">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust bar -->
+    <div class="trust-bar">
+      <div class="trust-inner">
+        <div class="trust-stat"><strong>Serving Texas</strong> · Fully insured & bonded · Documented safety & compliance</div>
+      </div>
+    </div>
+
+    <!-- Story -->
+    <section class="about-story">
+      <div class="section-inner">
+        <h2 class="section-title">Our story</h2>
+        <p>Lonestar Agro is Texas-rooted and built to scale. We were founded to deliver agricultural and land management at the standard commercial and municipal partners require. Our roots are in Texas—terrain, regulations, and conditions—but our operations, processes, and documentation are designed to scale. The same discipline and safety programs we apply in Texas support expansion when the right opportunities arise.</p>
+        <p>Operational discipline is non-negotiable. Proven processes, trained crews, and project management that meet deadlines and budgets. Many of our engagements are <strong>long-term contracts</strong>: multi-year right-of-way programs, institutional landscape and irrigation maintenance, and large-acreage land management. We are structured for those relationships—clear communication, compliance readiness, and reliability clients can plan on.</p>
+        <p>Our <strong>leadership and field teams</strong> bring deep experience in agriculture, vegetation management, irrigation, and site work. Leadership sets standards; field experience ensures they are executed consistently. Built for Texas. Built for what’s next.</p>
+      </div>
+    </section>
+
+    <!-- Mission, vision, values -->
+    <section class="mvv">
+      <div class="section-inner">
+        <p class="section-label">Purpose</p>
+        <h2 class="section-title">Mission, vision & core values</h2>
+        <div class="mvv-grid">
+          <div class="mvv-item">
+            <h3>Mission</h3>
+            <p>To deliver safe, reliable, and sustainable agricultural and land management that commercial and municipal partners can count on—at scale, with documented safety and compliance, and with long-term land value in view.</p>
+          </div>
+          <div class="mvv-item">
+            <h3>Vision</h3>
+            <p>To be the partner of choice for enterprise and institutional land management in Texas and beyond: known for operational discipline, field execution, and the ability to scale with our clients’ needs.</p>
+          </div>
+          <div class="mvv-item mvv-values">
+            <h3>Core values</h3>
+            <p>What we stand for in how we operate and deliver.</p>
+            <ul>
+              <li><strong>Safety first</strong> — Documented programs, trained crews, and a culture that puts people and the environment first.</li>
+              <li><strong>Integrity</strong> — We do what we say we’ll do. Contracts, timelines, and communication are clear and reliable.</li>
+              <li><strong>Excellence</strong> — Operational discipline, continuous improvement, and delivery that meets or exceeds scope.</li>
+              <li><strong>Stewardship</strong> — Land managed for the long term; sustainability and responsibility built into every plan.</li>
+              <li><strong>Partnership</strong> — Built for long-term contracts and institutional relationships. We succeed when our clients do.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Leadership -->
+    <section class="leadership">
+      <div class="section-inner">
+        <p class="section-label">Leadership</p>
+        <div class="leadership-exec-header">
+          <h2 class="section-title">Executive Leadership</h2>
+          <p class="leadership-exec-sub">Operational Discipline. Technical Depth. Scalable Vision.</p>
+        </div>
+        <p class="leadership-intro">Lonestar Agro is led by experienced operators who combine field execution, agricultural systems expertise, and disciplined project governance. Our leadership structure ensures that every project is supported by both technical precision and operational accountability.</p>
+
+        <!-- 1. Audrey Dickman -->
+        <article class="leadership-profile">
+          <div class="leadership-photo" aria-hidden="true" title="Audrey Dickman"></div>
+          <div class="leadership-profile-body">
+            <h3 class="leadership-name">Audrey Dickman</h3>
+            <p class="leadership-title">Managing Partner – Field Operations & Execution</p>
+            <p class="leadership-summary">Audrey Dickman leads field operations, execution standards, and large-scale project delivery across Texas. With over 17 years of high-pressure operational experience in multi-vendor environments, she ensures Lonestar Agro projects are delivered with structured oversight, safety discipline, and measurable performance benchmarks. Her background in large-scale oilfield completion programs translates directly into precision-driven land management and infrastructure deployment.</p>
+            <p class="leadership-focus-title">Leadership Focus</p>
+            <ul class="leadership-focus">
+              <li>Field Operations & Execution Oversight</li>
+              <li>Multi-Vendor Coordination</li>
+              <li>Budget Control & Cost Discipline</li>
+              <li>QA & Performance Monitoring</li>
+              <li>Large-Acreage Project Supervision</li>
+              <li>Contract-Level Operational Accountability</li>
+            </ul>
+            <p class="leadership-strength"><strong>Operational strength.</strong> Audrey’s experience supervising frac, wireline, coil, and high-risk field operations built a leadership model based on real-time decision-making, structured team coordination, high-accountability execution, performance data analysis, and risk-managed operations. At Lonestar Agro, this operational rigor supports institutional-grade agricultural and land management projects.</p>
+            <div class="leadership-cv-links">
+              <a href="audrey-dickman-cv.html" class="cv-view">View full profile &amp; skills →</a>
+              <a href="assets/cvs/audrey-dickman-cv.pdf" class="cv-download" download>Download CV (PDF)</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Bulent AYSEN -->
+        <article class="leadership-profile">
+          <div class="leadership-photo" aria-hidden="true" title="Bulent AYSEN"></div>
+          <div class="leadership-profile-body">
+            <h3 class="leadership-name">Bulent AYSEN</h3>
+            <p class="leadership-title">Managing Partner – Technical & Agricultural Systems</p>
+            <p class="leadership-summary">Bulent AYSEN leads technical strategy, irrigation architecture, and agricultural systems development at Lonestar Agro. With more than 26 years of experience in agricultural project development, irrigation systems, and international agro-business management, he brings structured technical expertise and large-scale implementation capability. His background spans multinational agricultural firms, key account project management, and sustainable infrastructure modeling.</p>
+            <p class="leadership-focus-title">Leadership Focus</p>
+            <ul class="leadership-focus">
+              <li>Irrigation System Architecture</li>
+              <li>Agricultural Infrastructure Design</li>
+              <li>Governmental & Institutional Project Structuring</li>
+              <li>Large-Scale Agro Development</li>
+              <li>Budget Planning & Forecasting</li>
+              <li>Strategic Business Development</li>
+            </ul>
+            <p class="leadership-strength"><strong>Technical strength.</strong> Bulent AYSEN’s experience at Netafim and international greenhouse projects provides advanced irrigation optimization knowledge, sustainable agricultural modeling, institutional contract readiness, and long-term soil and water strategy integration. He ensures Lonestar Agro operates not only as a land service provider, but as a technically structured agricultural systems company.</p>
+            <div class="leadership-cv-links">
+              <a href="bulent-aysen-cv.html" class="cv-view">View full profile &amp; skills →</a>
+              <a href="assets/cvs/bulent-aysen-cv.pdf" class="cv-download" download>Download CV (PDF)</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Joint Leadership Philosophy -->
+        <div class="leadership-philosophy">
+          <div class="section-inner">
+            <h2 class="section-title">Our Operating Model</h2>
+            <p>Lonestar Agro is built on dual-discipline leadership:</p>
+            <ul>
+              <li><strong>Operational Execution</strong> — Field performance and risk control</li>
+              <li><strong>Technical Strategy</strong> — Agricultural systems and infrastructure design</li>
+            </ul>
+            <p>This integrated leadership model allows the company to deliver:</p>
+            <ul>
+              <li>Scalable acreage management</li>
+              <li>Institutional-grade project readiness</li>
+              <li>Budget-controlled implementation</li>
+              <li>Long-term land value preservation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Optional: metrics -->
+        <div class="leadership-metrics">
+          <div class="leadership-metrics-item">
+            <span class="metric-value">43+</span>
+            <p class="metric-label">Years of Combined Experience</p>
+          </div>
+          <div class="leadership-metrics-item">
+            <span class="metric-value">Multi-Region</span>
+            <p class="metric-label">Operational Exposure</p>
+          </div>
+          <div class="leadership-metrics-item">
+            <span class="metric-value">Institutional & Commercial</span>
+            <p class="metric-label">Project Background</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- By the numbers -->
+    <section class="numbers">
+      <div class="section-inner">
+        <p class="section-label">Scale</p>
+        <h2 class="section-title">Lonestar Agro at a glance</h2>
+        <div class="numbers-grid">
+          <div class="numbers-item">
+            <span class="num">[X]</span>
+            <p class="num-label">Years serving Texas</p>
+          </div>
+          <div class="numbers-item">
+            <span class="num">[X]+</span>
+            <p class="num-label">Projects delivered</p>
+          </div>
+          <div class="numbers-item">
+            <span class="num">[X]</span>
+            <p class="num-label">Team members</p>
+          </div>
+          <div class="numbers-item">
+            <span class="num">Fully insured & bonded</span>
+            <p class="num-label">Vendor-ready</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-block">
+      <div class="cta-block-inner">
+        <h2 class="section-title">Partner with us</h2>
+        <p class="section-sub">Whether you’re a municipality, utility, developer, or landowner, we’re ready to discuss your next project. Long-term contracts and institutional partnerships are at the core of how we operate.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary">Request a Quote</a>
+          <a href="contact.html" class="btn-secondary">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__col footer__brand">
+        <a href="index.html" class="logo" aria-label="Ana sayfa"><img src="assets/logo.png" alt="Lone Star Agro - Landscape Architect Maintenance" /></a>
+        <p class="footer__brand-tagline">Texas-rooted. Enterprise-grade agricultural and land management for commercial and municipal partners.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Quick links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="safety-compliance.html">Safety & Compliance</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <ul>
+          <li><a href="services/agricultural-production.html">Agricultural Production</a></li>
+          <li><a href="services/commercial-land-management.html">Commercial Land Management</a></li>
+          <li><a href="services/irrigation-water-systems.html">Irrigation & Water Systems</a></li>
+          <li><a href="services/soil-crop-optimization.html">Soil & Crop Optimization</a></li>
+          <li><a href="services/municipal-institutional.html">Municipal & Institutional</a></li>
+          <li><a href="services/infrastructure-development.html">Infrastructure Development</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Industries</p>
+        <ul>
+          <li><a href="industries-served.html">Municipal & Government</a></li>
+          <li><a href="industries-served.html">Energy & Utilities</a></li>
+          <li><a href="industries-served.html">Agriculture & Ranching</a></li>
+          <li><a href="industries-served.html">Commercial & Corporate</a></li>
+          <li><a href="industries-served.html">Institutional</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <p class="footer__contact-item"><a href="https://www.lonestar-agro.com" target="_blank" rel="noopener">www.lonestar-agro.com</a></p>
+        <p class="footer__contact-item"><a href="tel:+14023639991">+1 (402) 363-9991</a></p>
+        <p class="footer__contact-item"><a href="mailto:contact@lonestar-agro.com">contact@lonestar-agro.com</a></p>
+        <a href="https://wa.me/14023639991?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Lonestar%20Agro." class="footer__wa-cta" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <div class="footer__newsletter">
+          <p class="footer__col-title">Newsletter</p>
+          <p class="footer__newsletter-desc">Updates on services, projects, and industry insights.</p>
+          <form class="footer__newsletter-form" action="#" method="post" aria-label="Newsletter signup">
+            <input type="email" name="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__social-locations">
+      <div class="footer__social" aria-label="Social links">
+        <a href="https://www.linkedin.com/company/lonestar-agro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://twitter.com/lonestaragro" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.facebook.com/lonestaragro" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      </div>
+      <div class="footer__locations">
+        <span>Serving </span><a href="locations.html">Texas</a><span> · </span><a href="locations.html">Locations</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+      <p class="footer__copy">© 2025 Lonestar Agro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="wa-float" aria-label="Contact us on WhatsApp">
+    <a class="wa-float__link" href="https://wa.me/14023639991?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Lonestar%20Agro." target="_blank" rel="noopener noreferrer">
+      <span class="wa-float__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </span>
+      <span class="wa-float__label">Chat</span>
+    </a>
+  </div>
+
+  <script>
+    (function() {
+      var t = document.querySelector('.nav-toggle');
+      var m = document.getElementById('nav-menu');
+      if (!t || !m) return;
+      function close() {
+        document.body.classList.remove('nav-open');
+        t.setAttribute('aria-expanded', 'false');
+        t.setAttribute('aria-label', 'Open menu');
+        t.querySelector('span').textContent = '\u2630';
+      }
+      t.addEventListener('click', function() { document.body.classList.contains('nav-open') ? close() : (document.body.classList.add('nav-open'), t.setAttribute('aria-expanded', 'true'), t.setAttribute('aria-label', 'Close menu'), t.querySelector('span').textContent = '\u2715'); });
+      m.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', close); });
+    })();
+  </script>
+</body>
+</html>

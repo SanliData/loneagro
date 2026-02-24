@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agricultural Production | Lonestar Agro | Texas</title>
+  <meta name="description" content="High-efficiency crop systems, greenhouse operations, and precision-based yield optimization for institutional and commercial scale across Texas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --color-bg: #0d0d0d; --color-surface: #161616; --color-surface-elevated: #1c1c1c; --color-text: #f5f5f5; --color-text-muted: #a3a3a3; --color-accent: #c9a227; --color-accent-hover: #d4af37; --color-border: #2a2a2a; --font-display: 'DM Serif Display', Georgia, serif; --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; --container: min(1200px, 100% - 3rem); --section-padding: clamp(4rem, 10vw, 6rem); }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.6; color: var(--color-text); background: var(--color-bg); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: rgba(13, 13, 13, 0.92); border-bottom: 1px solid var(--color-border); backdrop-filter: blur(12px); }
+    .nav-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .logo { display: flex; align-items: center; }
+    .logo img { height: 40px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a { color: var(--color-text-muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--color-text); }
+    .nav-cta { display: inline-block; padding: 0.6rem 1.25rem; background: var(--color-accent); color: var(--color-bg); font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--color-accent-hover); color: var(--color-bg); }
+    .service-hero { padding: calc(80px + var(--section-padding)) var(--section-padding) var(--section-padding); background: var(--color-bg); position: relative; }
+    .service-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201, 162, 39, 0.06) 0%, transparent 60%); pointer-events: none; }
+    .hero-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; position: relative; }
+    .service-hero .hero-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem; }
+    .service-hero .hero-headline { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.15; margin: 0 0 0.75rem; color: var(--color-text); }
+    .service-hero .hero-sub { font-size: clamp(1rem, 1.5vw, 1.125rem); color: var(--color-text-muted); max-width: 36rem; margin: 0 0 1.5rem; line-height: 1.6; }
+    .service-hero .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .btn-primary { display: inline-block; padding: 1rem 2rem; background: var(--color-accent); color: var(--color-bg); font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--color-accent-hover); color: var(--color-bg); }
+    .btn-secondary { display: inline-block; padding: 1rem 2rem; background: transparent; color: var(--color-text); font-weight: 600; font-size: 1rem; border: 1px solid var(--color-border); cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+    .btn-secondary:hover { border-color: var(--color-text-muted); color: var(--color-text); }
+    .trust-bar { padding: 2rem var(--section-padding); background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+    .trust-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+    .trust-stat { font-size: 0.875rem; font-weight: 600; color: var(--color-text-muted); }
+    .trust-stat strong { color: var(--color-text); }
+    section { padding: var(--section-padding) 0; }
+    .section-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+    .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400; margin: 0 0 0.75rem; color: var(--color-text); }
+    .section-sub { margin: 0; color: var(--color-text-muted); font-size: 1rem; }
+    .exec-summary { background: var(--color-bg); }
+    .exec-summary .section-inner { max-width: 42rem; }
+    .exec-summary p { color: var(--color-text-muted); line-height: 1.7; margin: 0; font-size: 1.0625rem; }
+    .capabilities { background: var(--color-surface); }
+    .capabilities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .capability-item { padding: 1.5rem; background: var(--color-surface-elevated); border: 1px solid var(--color-border); }
+    .capability-item h4 { font-size: 1rem; font-weight: 600; margin: 0 0 0.5rem; color: var(--color-text); }
+    .capability-item p { margin: 0; font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; }
+    .process { background: var(--color-bg); }
+    .process-list { margin-top: 2rem; }
+    .process-step { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid var(--color-border); align-items: start; }
+    .process-step:last-child { border-bottom: none; }
+    .process-step-num { width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; background: var(--color-surface); border: 1px solid var(--color-border); font-family: var(--font-display); font-size: 1.25rem; color: var(--color-accent); flex-shrink: 0; }
+    .process-step-content h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.5rem; color: var(--color-text); }
+    .process-step-content p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.65; }
+    @media (max-width: 600px) { .process-step { grid-template-columns: 1fr; } }
+    .case-example { background: var(--color-surface); }
+    .case-example-box { margin-top: 2rem; padding: 2.5rem; background: var(--color-surface-elevated); border: 1px solid var(--color-border); border-left: 4px solid var(--color-accent); }
+    .case-example-box .case-sector { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.5rem; }
+    .case-example-box .case-title { font-size: 1.25rem; font-weight: 600; margin: 0 0 0.75rem; color: var(--color-text); }
+    .case-example-box p { margin: 0; color: var(--color-text-muted); line-height: 1.65; font-size: 0.95rem; }
+    .case-example-box a { font-size: 0.9rem; font-weight: 600; color: var(--color-accent); margin-top: 1rem; display: inline-block; }
+    .case-example-box a:hover { text-decoration: underline; }
+    .safety-mention { background: var(--color-bg); }
+    .safety-mention-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border); }
+    .safety-mention-inner p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.65; flex: 1; min-width: 200px; }
+    .safety-mention-inner a { font-weight: 600; color: var(--color-accent); white-space: nowrap; }
+    .safety-mention-inner a:hover { text-decoration: underline; }
+    .sustainability-block { background: var(--color-surface); }
+    .sustainability-block p { margin: 0 0 1rem; color: var(--color-text-muted); line-height: 1.65; max-width: 36rem; }
+    .sustainability-block ul { margin: 0; padding: 0; list-style: none; }
+    .sustainability-block li { padding: 0.5rem 0; padding-left: 1.25rem; position: relative; color: var(--color-text-muted); font-size: 0.95rem; }
+    .sustainability-block li::before { content: ''; position: absolute; left: 0; top: 0.75em; width: 4px; height: 4px; background: var(--color-accent); }
+    .sustainability-block a { font-weight: 600; color: var(--color-accent); margin-top: 0.75rem; display: inline-block; }
+    .sustainability-block a:hover { text-decoration: underline; }
+    .cta-block { background: var(--color-bg); padding: var(--section-padding) 0; }
+    .cta-block-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; text-align: center; }
+    .cta-block .section-title { margin: 0 auto 0.75rem; }
+    .cta-block .section-sub { margin: 0 auto 2rem; max-width: 32rem; }
+    .cta-block .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .wa-quick { background: var(--color-surface); padding: 2rem 0; border-top: 1px solid var(--color-border); }
+    .wa-quick-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; }
+    .wa-quick p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; }
+    .wa-quick a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; background: #25D366; color: #fff; font-weight: 600; font-size: 0.9rem; border-radius: 50px; transition: background 0.2s, transform 0.2s; }
+    .wa-quick a:hover { background: #20bd5a; color: #fff; transform: translateY(-1px); }
+    .wa-quick a svg { width: 20px; height: 20px; }
+    .footer { padding: 3rem var(--section-padding); background: var(--color-surface); border-top: 2px solid var(--color-accent); }
+    .footer-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer .logo img { height: 36px; width: auto; }
+    .footer-links { display: flex; gap: 2rem; font-size: 0.875rem; color: var(--color-text-muted); }
+    .footer-links a:hover { color: var(--color-text); }
+    .footer-copy { font-size: 0.8rem; color: var(--color-text-muted); margin: 0; }
+    .wa-float { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; pointer-events: none; }
+    .wa-float__link { pointer-events: auto; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 56px; height: 56px; padding: 0; background: #25D366; color: #fff; border-radius: 50%; box-shadow: 0 2px 12px rgba(37, 211, 102, 0.35); transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease; }
+    .wa-float__link:hover { transform: scale(1.1) translateY(-2px); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5); background: #20bd5a; color: #fff; }
+    .wa-float__icon { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; }
+    .wa-float__icon svg { width: 100%; height: 100%; }
+    .wa-float__label { font-size: 0.8125rem; font-weight: 600; white-space: nowrap; padding-right: 0.5rem; }
+    @media (min-width: 520px) { .wa-float__link { width: auto; height: auto; min-width: 56px; min-height: 56px; padding: 0 1rem 0 0.6rem; border-radius: 50px; } }
+    @media (max-width: 519px) { .wa-float__label { display: none; } }
+  </style>
+  <link rel="stylesheet" href="../assets/css/mobile.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="logo" aria-label="Home"><img src="../assets/logo.png" alt="Lonestar Agro" /></a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../industries-served.html">Industries Served</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../sustainability.html">Sustainability</a></li>
+        <li><a href="../safety-compliance.html">Safety & Compliance</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../careers.html">Careers</a></li>
+        <li><a href="../locations.html">Locations</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span aria-hidden="true">&#9776;</span></button>
+      <a href="../contact.html" class="nav-cta">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-hero">
+      <div class="hero-inner">
+        <p class="hero-label">Services</p>
+        <h1 class="hero-headline">Agricultural Production</h1>
+        <p class="hero-sub">Enterprise-grade crop systems, greenhouse operations, and yield optimization for institutional and commercial partners across Texas.</p>
+        <div class="hero-ctas">
+          <a href="../contact.html" class="btn-primary">Request a Quote</a>
+          <a href="../contact.html" class="btn-secondary">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-bar">
+      <div class="trust-inner">
+        <div class="trust-stat"><strong>Serving Texas</strong> · Fully insured & bonded · Documented safety & compliance</div>
+      </div>
+    </div>
+
+    <section class="exec-summary">
+      <div class="section-inner">
+        <h2 class="section-title">Executive summary</h2>
+        <p>Lonestar Agro delivers high-efficiency agricultural production at institutional and commercial scale. We combine controlled-environment systems, precision agronomy, and documented processes to maximize yield and resource use. Our programs are built for multi-year contracts, vendor qualification, and RFP-ready compliance.</p>
+      </div>
+    </section>
+
+    <section class="capabilities">
+      <div class="section-inner">
+        <p class="section-label">What we deliver</p>
+        <h2 class="section-title">Operational capabilities</h2>
+        <p class="section-sub">End-to-end production support from planning through harvest and documentation.</p>
+        <div class="capabilities-grid">
+          <div class="capability-item">
+            <h4>Greenhouse & controlled-environment operations</h4>
+            <p>Climate-controlled growing, LED and supplemental lighting, irrigation and fertigation systems.</p>
+          </div>
+          <div class="capability-item">
+            <h4>Precision yield optimization</h4>
+            <p>Data-informed planting, nutrient and pest management, and harvest scheduling.</p>
+          </div>
+          <div class="capability-item">
+            <h4>Scale-ready programs</h4>
+            <p>Designed for institutional, corporate, and municipal contracts with clear SLAs.</p>
+          </div>
+          <div class="capability-item">
+            <h4>Documentation & reporting</h4>
+            <p>Yield records, input logs, and compliance-ready documentation for audits and RFPs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="section-inner">
+        <p class="section-label">How we work</p>
+        <h2 class="section-title">Process</h2>
+        <p class="section-sub">Structured, documented workflow from scope to delivery.</p>
+        <div class="process-list">
+          <div class="process-step">
+            <div class="process-step-num">1</div>
+            <div class="process-step-content">
+              <h3>Scope & site assessment</h3>
+              <p>Site visit, soil and infrastructure review, and definition of production goals and constraints.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">2</div>
+            <div class="process-step-content">
+              <h3>Program design</h3>
+              <p>Crop selection, planting schedules, inputs, and resource plans aligned with your objectives.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">3</div>
+            <div class="process-step-content">
+              <h3>Implementation</h3>
+              <p>Installation, planting, and activation of systems with trained crews and quality checks.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">4</div>
+            <div class="process-step-content">
+              <h3>Ongoing operations</h3>
+              <p>Monitoring, fertigation, pest management, and harvest with documented procedures.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">5</div>
+            <div class="process-step-content">
+              <h3>Reporting & optimization</h3>
+              <p>Yield and input reports, seasonal reviews, and continuous improvement recommendations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-example">
+      <div class="section-inner">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">Case example</h2>
+        <p class="section-sub">Proven results at scale.</p>
+        <div class="case-example-box">
+          <p class="case-sector">Institutional / Agricultural</p>
+          <h3 class="case-title">Controlled-environment production program</h3>
+          <p>Client required year-round production with documented inputs and yields for sustainability reporting. We designed and operate a greenhouse and high-efficiency crop program with full input and harvest documentation, meeting institutional procurement and reporting requirements.</p>
+          <a href="../projects.html">View more case studies →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety-mention">
+      <div class="section-inner">
+        <div class="safety-mention-inner">
+          <p><strong>Safety & compliance.</strong> All production operations are delivered with documented safety programs, trained crews, and compliance readiness for vendor qualification and RFPs.</p>
+          <a href="../safety-compliance.html">Safety & compliance details →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sustainability-block">
+      <div class="section-inner">
+        <p class="section-label">Stewardship</p>
+        <h2 class="section-title">Sustainability integration</h2>
+        <p>Agricultural production is aligned with water efficiency, soil health, and input optimization. We integrate sustainable practices into every program.</p>
+        <ul>
+          <li>Water-efficient irrigation and fertigation</li>
+          <li>Nutrient management to minimize runoff and optimize uptake</li>
+          <li>Documentation for sustainability and ESG reporting</li>
+        </ul>
+        <a href="../sustainability.html">Our sustainability approach →</a>
+      </div>
+    </section>
+
+    <section class="cta-block">
+      <div class="cta-block-inner">
+        <h2 class="section-title">Ready to discuss agricultural production?</h2>
+        <p class="section-sub">Scope, quote, and delivery. Our team is ready.</p>
+        <div class="cta-buttons">
+          <a href="../contact.html" class="btn-primary">Request a Quote</a>
+          <a href="../contact.html" class="btn-secondary">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wa-quick">
+      <div class="wa-quick-inner">
+        <p>Prefer to chat? Reach us on WhatsApp.</p>
+        <a href="https://wa.me/14023639991?text=Hello%2C%20I%20would%20like%20to%20discuss%20Agricultural%20Production%20with%20Lonestar%20Agro." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat with us
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="../index.html" class="logo" aria-label="Home"><img src="../assets/logo.png" alt="Lonestar Agro" /></a>
+      <nav class="footer-links">
+        <a href="../services.html">Services</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../sustainability.html">Sustainability</a>
+        <a href="../safety-compliance.html">Safety & Compliance</a>
+        <a href="../about.html">About Us</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2025 Lonestar Agro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="wa-float" aria-label="Contact us on WhatsApp">
+    <a class="wa-float__link" href="https://wa.me/14023639991?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Lonestar%20Agro." target="_blank" rel="noopener noreferrer">
+      <span class="wa-float__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>
+      <span class="wa-float__label">Chat</span>
+    </a>
+  </div>
+
+  <script>
+    (function() {
+      var t = document.querySelector('.nav-toggle');
+      var m = document.getElementById('nav-menu');
+      if (!t || !m) return;
+      function close() {
+        document.body.classList.remove('nav-open');
+        t.setAttribute('aria-expanded', 'false');
+        t.setAttribute('aria-label', 'Open menu');
+        t.querySelector('span').textContent = '\u2630';
+      }
+      t.addEventListener('click', function() { document.body.classList.contains('nav-open') ? close() : (document.body.classList.add('nav-open'), t.setAttribute('aria-expanded', 'true'), t.setAttribute('aria-label', 'Close menu'), t.querySelector('span').textContent = '\u2715'); });
+      m.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', close); });
+    })();
+  </script>
+</body>
+</html>

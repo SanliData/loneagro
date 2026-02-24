@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industries Served | Lonestar Agro | Texas</title>
+  <meta name="description" content="Lonestar Agro serves municipal, energy, agriculture, commercial, and institutional clients across Texas with scalable land and landscape solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --color-bg: #0d0d0d; --color-surface: #161616; --color-surface-elevated: #1c1c1c; --color-text: #f5f5f5; --color-text-muted: #a3a3a3; --color-accent: #c9a227; --color-accent-hover: #d4af37; --color-border: #2a2a2a; --font-display: 'DM Serif Display', Georgia, serif; --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; --container: min(1200px, 100% - 3rem); --section-padding: clamp(4rem, 10vw, 6rem); }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.6; color: var(--color-text); background: var(--color-bg); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: rgba(13, 13, 13, 0.92); border-bottom: 1px solid var(--color-border); backdrop-filter: blur(12px); }
+    .nav-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .logo { display: flex; align-items: center; }
+    .logo img { height: 40px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a { color: var(--color-text-muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--color-text); }
+    .nav-cta { display: inline-block; padding: 0.6rem 1.25rem; background: var(--color-accent); color: var(--color-bg); font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--color-accent-hover); color: var(--color-bg); }
+    .service-hero { padding: calc(80px + var(--section-padding)) var(--section-padding) var(--section-padding); background: var(--color-surface); }
+    .hero-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+    .service-hero .hero-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem; }
+    .service-hero .hero-headline { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.15; margin: 0 0 0.5rem; color: var(--color-text); }
+    .service-hero .hero-sub { font-size: clamp(1rem, 1.5vw, 1.125rem); color: var(--color-text-muted); max-width: 42rem; margin: 0; line-height: 1.65; }
+    section { padding: var(--section-padding) 0; }
+    .section-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+    .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400; margin: 0 0 0.75rem; color: var(--color-text); }
+    .section-sub { margin: 0; color: var(--color-text-muted); font-size: 1rem; }
+    .industries-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .industry-card { padding: 2rem; background: var(--color-surface-elevated); border: 1px solid var(--color-border); }
+    .industry-card h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.5rem; color: var(--color-text); }
+    .industry-card p { margin: 0; font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; }
+    .cta-block { background: var(--color-surface); padding: var(--section-padding) 0; }
+    .cta-block-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; text-align: center; }
+    .cta-block .section-title { margin: 0 auto 0.75rem; }
+    .cta-block .section-sub { margin: 0 auto 2rem; max-width: 36rem; }
+    .cta-block .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .btn-primary { display: inline-block; padding: 1rem 2rem; background: var(--color-accent); color: var(--color-bg); font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--color-accent-hover); color: var(--color-bg); }
+    .btn-secondary { display: inline-block; padding: 1rem 2rem; background: transparent; color: var(--color-text); font-weight: 600; font-size: 1rem; border: 1px solid var(--color-border); cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+    .btn-secondary:hover { border-color: var(--color-text-muted); color: var(--color-text); }
+    .footer { background: var(--color-surface); border-top: 2px solid var(--color-accent); }
+    .footer__top { padding: 3.5rem var(--section-padding) 2.5rem; max-width: var(--container); margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; display: grid; grid-template-columns: 1.5fr 1fr 1.2fr 1fr 1.3fr; gap: 2.5rem 2rem; align-items: start; }
+    @media (max-width: 1100px) { .footer__top { grid-template-columns: 1fr 1fr 1fr; } }
+    @media (max-width: 700px) { .footer__top { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2.5rem 1.5rem; } }
+    @media (max-width: 480px) { .footer__top { grid-template-columns: 1fr; } }
+    .footer__brand .logo img { height: 36px; width: auto; }
+    .footer__brand-tagline { font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.5; margin: 0; max-width: 20rem; }
+    .footer__col-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-text-muted); margin: 0 0 1rem; }
+    .footer__col ul { list-style: none; margin: 0; padding: 0; }
+    .footer__col li { margin: 0 0 0.5rem; }
+    .footer__col a { font-size: 0.875rem; color: var(--color-text-muted); transition: color 0.2s; }
+    .footer__col a:hover { color: var(--color-text); }
+    .footer__contact-item { font-size: 0.875rem; color: var(--color-text-muted); margin: 0 0 0.4rem; }
+    .footer__contact-item a { color: var(--color-text); font-weight: 500; }
+    .footer__contact-item a:hover { color: var(--color-accent); }
+    .footer__wa-cta { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; padding: 0.5rem 1rem; background: #25D366; color: #fff; font-size: 0.8125rem; font-weight: 600; border-radius: 50px; transition: background 0.2s, transform 0.2s; }
+    .footer__wa-cta:hover { background: #20bd5a; color: #fff; transform: translateY(-1px); }
+    .footer__wa-cta svg { width: 18px; height: 18px; }
+    .footer__newsletter-desc { font-size: 0.8125rem; color: var(--color-text-muted); margin: 0 0 0.75rem; line-height: 1.4; }
+    .footer__newsletter-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .footer__newsletter-form input { flex: 1; min-width: 140px; padding: 0.6rem 0.75rem; font-family: var(--font-body); font-size: 0.875rem; color: var(--color-text); background: var(--color-bg); border: 1px solid var(--color-border); }
+    .footer__newsletter-form button { padding: 0.6rem 1rem; font-family: var(--font-body); font-size: 0.8125rem; font-weight: 600; background: var(--color-accent); color: var(--color-bg); border: none; cursor: pointer; transition: background 0.2s; }
+    .footer__social-locations { padding: 1.5rem 1.5rem 1.25rem; max-width: var(--container); margin: 0 auto; border-top: 1px solid var(--color-border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+    .footer__social { display: flex; align-items: center; gap: 1rem; }
+    .footer__social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--color-border); color: var(--color-text-muted); transition: color 0.2s, border-color 0.2s; }
+    .footer__social a:hover { color: var(--color-accent); border-color: var(--color-accent); }
+    .footer__social a svg { width: 18px; height: 18px; }
+    .footer__locations { font-size: 0.8125rem; color: var(--color-text-muted); }
+    .footer__locations a { color: var(--color-text-muted); }
+    .footer__locations a:hover { color: var(--color-text); }
+    .footer__bottom { padding: 1rem 1.5rem; max-width: var(--container); margin: 0 auto; border-top: 1px solid var(--color-border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+    .footer__legal { display: flex; gap: 1.5rem; font-size: 0.8rem; }
+    .footer__legal a { color: var(--color-text-muted); }
+    .footer__legal a:hover { color: var(--color-text); }
+    .footer__copy { font-size: 0.8rem; color: var(--color-text-muted); margin: 0; }
+    .wa-float { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; pointer-events: none; }
+    .wa-float__link { pointer-events: auto; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 56px; height: 56px; padding: 0; background: #25D366; color: #fff; border-radius: 50%; box-shadow: 0 2px 12px rgba(37, 211, 102, 0.35); transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease; }
+    .wa-float__link:hover { transform: scale(1.1) translateY(-2px); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5); background: #20bd5a; color: #fff; }
+    .wa-float__icon { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; }
+    .wa-float__icon svg { width: 100%; height: 100%; }
+    .wa-float__label { font-size: 0.8125rem; font-weight: 600; white-space: nowrap; padding-right: 0.5rem; }
+    @media (min-width: 520px) { .wa-float__link { width: auto; height: auto; min-width: 56px; min-height: 56px; padding: 0 1rem 0 0.6rem; border-radius: 50px; } }
+    @media (max-width: 519px) { .wa-float__label { display: none; } }
+  </style>
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Home"><img src="assets/logo.png" alt="Lonestar Agro" /></a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries-served.html">Industries Served</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="safety-compliance.html">Safety & Compliance</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="locations.html">Locations</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span aria-hidden="true">&#9776;</span></button>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-hero">
+      <div class="hero-inner">
+        <p class="hero-label">Industries</p>
+        <h1 class="hero-headline">Industries we serve</h1>
+        <p class="hero-sub">Municipal, energy, agriculture, commercial, and institutional clients across Texas. One partner for land management, landscape, and agricultural solutions at scale.</p>
+      </div>
+    </section>
+
+    <section class="section industries-section" style="background: var(--color-bg);">
+      <div class="section-inner">
+        <p class="section-label">Who we work with</p>
+        <h2 class="section-title">Sectors and clients</h2>
+        <p class="section-sub">We deliver land management, landscape, irrigation, and agricultural services to the following sectors.</p>
+        <div class="industries-grid">
+          <div class="industry-card">
+            <h3>Municipal & Government</h3>
+            <p>Cities, counties, and public agencies. ROW maintenance, public land stewardship, and contract-ready operations with full compliance and reporting.</p>
+          </div>
+          <div class="industry-card">
+            <h3>Energy & Utilities</h3>
+            <p>Right-of-way vegetation control, corridor maintenance, and site landscaping for utilities and energy infrastructure.</p>
+          </div>
+          <div class="industry-card">
+            <h3>Agriculture & Ranching</h3>
+            <p>Large-acreage landowners, ranches, and agricultural operations. Vegetation control, soil and crop optimization, and irrigation systems.</p>
+          </div>
+          <div class="industry-card">
+            <h3>Commercial & Corporate</h3>
+            <p>Corporate campuses, retail, healthcare, and commercial property. Landscape maintenance, asset preservation, and SLA-based programs.</p>
+          </div>
+          <div class="industry-card">
+            <h3>Institutional</h3>
+            <p>Universities, hospitals, and institutional campuses. Full-service landscape and land management with documented safety and vendor qualification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-block">
+      <div class="cta-block-inner">
+        <h2 class="section-title">Ready to work with us?</h2>
+        <p class="section-sub">Scope, quote, and delivery. Our team is ready.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary">Request a Quote</a>
+          <a href="services.html" class="btn-secondary">View Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__col footer__brand">
+        <a href="index.html" class="logo" aria-label="Home"><img src="assets/logo.png" alt="Lonestar Agro" /></a>
+        <p class="footer__brand-tagline">Texas-rooted. Enterprise-grade agricultural and land management for commercial and municipal partners.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Quick links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="safety-compliance.html">Safety & Compliance</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <ul>
+          <li><a href="services/agricultural-production.html">Agricultural Production</a></li>
+          <li><a href="services/commercial-land-management.html">Commercial Land Management</a></li>
+          <li><a href="services/irrigation-water-systems.html">Irrigation & Water Systems</a></li>
+          <li><a href="services/soil-crop-optimization.html">Soil & Crop Optimization</a></li>
+          <li><a href="services/municipal-institutional.html">Municipal & Institutional</a></li>
+          <li><a href="services/infrastructure-development.html">Infrastructure Development</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Industries</p>
+        <ul>
+          <li><a href="industries-served.html">Municipal & Government</a></li>
+          <li><a href="industries-served.html">Energy & Utilities</a></li>
+          <li><a href="industries-served.html">Agriculture & Ranching</a></li>
+          <li><a href="industries-served.html">Commercial & Corporate</a></li>
+          <li><a href="industries-served.html">Institutional</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <p class="footer__contact-item"><a href="https://www.lonestar-agro.com" target="_blank" rel="noopener">www.lonestar-agro.com</a></p>
+        <p class="footer__contact-item"><a href="tel:+14023639991">+1 (402) 363-9991</a></p>
+        <p class="footer__contact-item"><a href="mailto:contact@lonestar-agro.com">contact@lonestar-agro.com</a></p>
+        <a href="https://wa.me/14023639991?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Lonestar%20Agro." class="footer__wa-cta" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <div class="footer__newsletter">
+          <p class="footer__col-title">Newsletter</p>
+          <p class="footer__newsletter-desc">Updates on services, projects, and industry insights.</p>
+          <form class="footer__newsletter-form" action="#" method="post" aria-label="Newsletter signup">
+            <input type="email" name="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__social-locations">
+      <div class="footer__social" aria-label="Social links">
+        <a href="https://www.linkedin.com/company/lonestar-agro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://twitter.com/lonestaragro" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.facebook.com/lonestaragro" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      </div>
+      <div class="footer__locations">
+        <span>Serving </span><a href="locations.html">Texas</a><span> · </span><a href="locations.html">Locations</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+      <p class="footer__copy">© 2025 Lonestar Agro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="wa-float" aria-label="Contact us on WhatsApp">
+    <a class="wa-float__link" href="https://wa.me/14023639991?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Lonestar%20Agro." target="_blank" rel="noopener noreferrer">
+      <span class="wa-float__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </span>
+      <span class="wa-float__label">Chat</span>
+    </a>
+  </div>
+
+  <script>
+    (function() {
+      var t = document.querySelector('.nav-toggle');
+      var m = document.getElementById('nav-menu');
+      if (!t || !m) return;
+      function close() {
+        document.body.classList.remove('nav-open');
+        t.setAttribute('aria-expanded', 'false');
+        t.setAttribute('aria-label', 'Open menu');
+        t.querySelector('span').textContent = '\u2630';
+      }
+      t.addEventListener('click', function() { document.body.classList.contains('nav-open') ? close() : (document.body.classList.add('nav-open'), t.setAttribute('aria-expanded', 'true'), t.setAttribute('aria-label', 'Close menu'), t.querySelector('span').textContent = '\u2715'); });
+      m.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', close); });
+    })();
+  </script>
+</body>
+</html>

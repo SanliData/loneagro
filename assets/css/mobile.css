@@ -1,0 +1,142 @@
+/* Mobile-first overrides and responsive nav – load after main styles */
+
+/* ----- Mobile nav toggle (hidden on desktop) ----- */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--color-surface-elevated, #1c1c1c);
+  border: 1px solid var(--color-border, #2a2a2a);
+  color: var(--color-text, #f5f5f5);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-toggle:hover {
+  background: var(--color-border, #2a2a2a);
+  border-color: var(--color-text-muted, #a3a3a3);
+}
+
+/* ----- Breakpoint: tablet and below ----- */
+@media (max-width: 900px) {
+  .nav-inner {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .nav-toggle {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+  }
+  .nav-cta { order: 3; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 13, 13, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 999;
+    padding: 5rem 1.5rem 2rem;
+    list-style: none;
+    margin: 0;
+  }
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  body.nav-open .nav-links {
+    display: flex;
+  }
+  body.nav-open { overflow: hidden; }
+  .section-inner,
+  .hero-inner,
+  .trust-inner,
+  .cta-block-inner,
+  .filter-inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .service-hero,
+  .hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ----- Small phones ----- */
+@media (max-width: 480px) {
+  .hero-headline,
+  .service-hero .hero-headline {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  .section-title {
+    font-size: clamp(1.35rem, 4vw, 1.75rem);
+  }
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.875rem 1.5rem;
+    min-height: 44px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .hero-ctas,
+  .cta-block .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-ctas a,
+  .cta-block .cta-buttons a {
+    width: 100%;
+  }
+  .trust-bar .trust-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .trust-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .trust-logos span {
+    border-right: none;
+    padding-right: 0;
+  }
+  .footer__social-locations {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+/* Touch-friendly: minimum tap targets */
+@media (pointer: coarse) {
+  .nav-cta,
+  .footer__wa-cta,
+  .wa-float__link {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  a.btn-primary,
+  a.btn-secondary,
+  button[type="submit"] {
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,20 @@
+# OS / Windows reserved
+.DS_Store
+Thumbs.db
+nul
+NUL
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Env / secrets
+.env
+.env.local
+*.pem
+
+# Logs
+*.log
+npm-debug.log*

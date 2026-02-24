@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lone Star Agro — Yönetim Sunumu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --surface: #161616;
+      --text: #f5f5f5;
+      --muted: #a3a3a3;
+      --accent: #c9a227;
+      --green: #2E8B3E;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .slide {
+      min-height: 100vh;
+      padding: 4rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .slide h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      margin: 0 0 0.5rem;
+      color: var(--accent);
+    }
+    .slide h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 0 0 2rem;
+    }
+    .slide h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+      color: var(--text);
+    }
+    .slide p, .slide li {
+      color: var(--muted);
+      margin: 0 0 0.75rem;
+      font-size: 1rem;
+    }
+    .slide ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+    .slide .meta {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-top: 2rem;
+    }
+    .logo-preview {
+      width: 100%;
+      max-width: 320px;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 1rem;
+    }
+    .logo-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid var(--surface);
+    }
+    th { color: var(--accent); font-weight: 600; }
+    td { color: var(--muted); }
+    .nav-dots {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 10;
+    }
+    .nav-dots a {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--muted);
+      transition: background 0.2s;
+    }
+    .nav-dots a:hover { background: var(--muted); }
+    .nav-dots a.active { background: var(--accent); border-color: var(--accent); }
+    .badge {
+      display: inline-block;
+      background: rgba(201, 162, 39, 0.2);
+      color: var(--accent);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-dots" aria-label="Slayt geçişi">
+    <a href="#slide-1" class="active" aria-label="Slayt 1"></a>
+    <a href="#slide-2" aria-label="Slayt 2"></a>
+    <a href="#slide-3" aria-label="Slayt 3"></a>
+    <a href="#slide-4" aria-label="Slayt 4"></a>
+    <a href="#slide-5" aria-label="Slayt 5"></a>
+    <a href="#slide-6" aria-label="Slayt 6"></a>
+  </nav>
+
+  <section class="slide" id="slide-1">
+    <h1>Lone Star Agro</h1>
+    <h2>Web sitesi projesi — çalışma özeti</h2>
+    <p>Bu sunum, yürütülen teknik ve görsel çalışmaların yönetime özetini içerir.</p>
+    <p class="meta">Sunum tarihi: Şubat 2025 · www.lonestar-agro.com</p>
+  </section>
+
+  <section class="slide" id="slide-2">
+    <h1>Proje kapsamı</h1>
+    <h2>Marka & hedef</h2>
+    <p><strong>Lone Star Agro</strong> — Texas merkezli, kurumsal tarım ve arazi yönetimi; peyzaj mimarlığı ve bakım hizmetleri.</p>
+    <ul>
+      <li>B2B odaklı, kurumsal ve belediye iş ortakları için ölçeklenebilir hizmet</li>
+      <li>Operasyonel mükemmellik, güvenlik ve sürdürülebilirlik vurgusu</li>
+      <li>Profesyonel, kurumsal görünüm ve güven veren içerik</li>
+    </ul>
+    <p class="meta">Proje dokümanları: <code>docs/</code>, <code>content/</code></p>
+  </section>
+
+  <section class="slide" id="slide-3">
+    <h1>Logo & marka görseli</h1>
+    <h2>Tamamlanan işler</h2>
+    <ul>
+      <li><strong>Kurumsal logo</strong> tüm sayfalarda kullanıma alındı (Texas silüeti, yeşil zemin, yıldız formunda çiçek, “LONE STAR AGRO” ve “Landscape Architect Maintenance” metinleri).</li>
+      <li>Logo <strong>header (navigasyon)</strong> ve <strong>footer</strong>da yer alıyor; tıklanınca ana sayfaya yönlendiriyor.</li>
+      <li><strong>Ana sayfa karşılama alanında (hero)</strong> logo büyük ve belirgin şekilde konumlandırıldı; boş A4 hissini azaltmak için hafif yeşil panel ve gölge kullanıldı.</li>
+      <li>Logo dosyası: <code>assets/logo.png</code> — tüm sayfalarda aynı görsel kullanılıyor.</li>
+    </ul>
+    <p class="meta"><span class="badge">Tamamlandı</span> Logo entegrasyonu</p>
+  </section>
+
+  <section class="slide" id="slide-4">
+    <h1>Sayfalar & yapı</h1>
+    <h2>Güncellenen sayfalar</h2>
+    <table>
+      <thead>
+        <tr><th>Sayfa</th><th>Açıklama</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>index.html</td><td>Ana sayfa — hero, güven çubuğu, hizmetler, CTA</td></tr>
+        <tr><td>about.html</td><td>Hakkımızda — hikaye, misyon, değerler</td></tr>
+        <tr><td>sustainability.html</td><td>Sürdürülebilirlik</td></tr>
+        <tr><td>safety-compliance.html</td><td>Güvenlik & uyumluluk</td></tr>
+        <tr><td>templates/service-page.html</td><td>Hizmet sayfası şablonu</td></tr>
+      </tbody>
+    </table>
+    <p>Tüm sayfalarda ortak: logo (nav + footer), ana sayfaya link, tutarlı navigasyon ve WhatsApp iletişim bileşeni (şablonlarda).</p>
+    <p class="meta"><span class="badge">Tamamlandı</span> Sayfa güncellemeleri</p>
+  </section>
+
+  <section class="slide" id="slide-5">
+    <h1>Teknik özet</h1>
+    <h2>Kullanılan yapı & araçlar</h2>
+    <div class="two-col">
+      <div>
+        <h3>Front-end</h3>
+        <ul>
+          <li>Statik HTML + CSS</li>
+          <li>Logo: PNG (assets/logo.png)</li>
+          <li>Yerel test: Python HTTP server veya <code>npx serve</code> (örn. port 3000)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Proje klasörleri</h3>
+        <ul>
+          <li><code>assets/</code> — logo, görseller</li>
+          <li><code>docs/</code> — mimari, sitemap, SEO, ton rehberi</li>
+          <li><code>content/</code> — metin yapıları, şablonlar</li>
+          <li><code>components/</code> — WhatsApp float vb.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="meta">Git yok; proje yerel / OneDrive üzerinde.</p>
+  </section>
+
+  <section class="slide" id="slide-6">
+    <h1>Sonraki adımlar (öneri)</h1>
+    <h2>Yönetim kararına sunulabilecek başlıklar</h2>
+    <ul>
+      <li><strong>İçerik:</strong> Placeholder’ların (telefon, e-posta, istatistikler) gerçek verilerle doldurulması.</li>
+      <li><strong>Formlar:</strong> “Request a Quote” ve “Contact” formlarının backend / e-posta entegrasyonu.</li>
+      <li><strong>Görseller:</strong> Gerçek saha, ekip ve proje fotoğrafları; güvenlik/sertifika logoları.</li>
+      <li><strong>Yayın:</strong> Domain (www.lonestar-agro.com) ve hosting seçimi; canlıya alma.</li>
+      <li><strong>SEO:</strong> docs/seo-keyword-map.md ve meta açıklamalarının sayfa sayfa uygulanması.</li>
+    </ul>
+    <p class="meta">Sunum sonu — teşekkürler.</p>
+  </section>
+
+  <script>
+    (function() {
+      var slides = document.querySelectorAll('.slide');
+      var dots = document.querySelectorAll('.nav-dots a');
+      function updateActive() {
+        var top = window.scrollY + window.innerHeight / 3;
+        slides.forEach(function(s, i) {
+          var rect = s.getBoundingClientRect();
+          var slideTop = rect.top + window.scrollY;
+          if (top >= slideTop && (i === slides.length - 1 || top < slides[i + 1].getBoundingClientRect().top + window.scrollY)) {
+            dots.forEach(function(d) { d.classList.remove('active'); });
+            if (dots[i]) dots[i].classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', updateActive);
+      window.addEventListener('load', updateActive);
+    })();
+  </script>
+</body>
+</html>
