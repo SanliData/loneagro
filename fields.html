@@ -3,31 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Lonestar Agro | Texas</title>
-  <meta name="description" content="Contact Lonestar Agro for Texas agricultural services, commercial land management, irrigation systems, and municipal landscape contracts. Request a quote or get in touch." />
+  <title>Field Selector | Lonestar Agro | Texas</title>
+  <meta name="description" content="Draw your field boundary on the map. Export GeoJSON for soil and weather data (OpenWeather Agro)." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --color-bg: #0d0d0d;
-      --color-surface: #161616;
-      --color-surface-elevated: #1c1c1c;
-      --color-text: #f5f5f5;
-      --color-text-muted: #a3a3a3;
-      --color-accent: #c9a227;
-      --color-accent-hover: #d4af37;
-      --color-border: #2a2a2a;
-      --font-display: 'DM Serif Display', Georgia, serif;
-      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --container: min(1200px, 100% - 3rem);
-      --section-padding: clamp(4rem, 10vw, 6rem);
-    }
+    :root { --color-bg: #0d0d0d; --color-surface: #161616; --color-surface-elevated: #1c1c1c; --color-text: #f5f5f5; --color-text-muted: #a3a3a3; --color-accent: #c9a227; --color-accent-hover: #d4af37; --color-border: #2a2a2a; --font-display: 'DM Serif Display', Georgia, serif; --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; --container: min(1200px, 100% - 3rem); --section-padding: clamp(4rem, 10vw, 6rem); }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.6; color: var(--color-text); background: var(--color-bg); -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
-
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: rgba(13, 13, 13, 0.92); border-bottom: 1px solid var(--color-border); backdrop-filter: blur(12px); }
     .nav-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
     .logo { display: flex; align-items: center; }
@@ -37,41 +23,21 @@
     .nav-links a:hover { color: var(--color-text); }
     .nav-cta { display: inline-block; padding: 0.6rem 1.25rem; background: var(--color-accent); color: var(--color-bg); font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
     .nav-cta:hover { background: var(--color-accent-hover); color: var(--color-bg); }
-
     .service-hero { padding: calc(80px + var(--section-padding)) var(--section-padding) var(--section-padding); background: var(--color-surface); }
     .hero-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
     .service-hero .hero-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem; }
     .service-hero .hero-headline { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.15; margin: 0 0 0.5rem; color: var(--color-text); }
     .service-hero .hero-sub { font-size: clamp(1rem, 1.5vw, 1.125rem); color: var(--color-text-muted); max-width: 42rem; margin: 0; line-height: 1.65; }
-
-    .trust-bar { padding: 2rem var(--section-padding); background: var(--color-bg); border-bottom: 1px solid var(--color-border); }
-    .trust-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
-    .trust-stat { font-size: 0.875rem; font-weight: 600; color: var(--color-text-muted); letter-spacing: 0.03em; }
-    .trust-stat strong { color: var(--color-text); }
-
     section { padding: var(--section-padding) 0; }
     .section-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
     .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem; }
     .section-title { font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400; margin: 0 0 0.75rem; color: var(--color-text); }
     .section-sub { margin: 0; color: var(--color-text-muted); font-size: 1rem; }
-
-    .contact-section { background: var(--color-bg); }
-    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-    @media (max-width: 800px) { .contact-inner { grid-template-columns: 1fr; } }
-    .contact-form-wrap { background: var(--color-surface); border: 1px solid var(--color-border); padding: 2.5rem; }
-    .contact-form-wrap h3 { font-size: 1.25rem; font-weight: 600; margin: 0 0 1.5rem; color: var(--color-text); }
-    .form-row { margin-bottom: 1.25rem; }
-    .form-row label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--color-text-muted); }
-    .form-row input, .form-row select, .form-row textarea { width: 100%; padding: 0.75rem 1rem; font-family: var(--font-body); font-size: 1rem; color: var(--color-text); background: var(--color-bg); border: 1px solid var(--color-border); }
-    .form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: var(--color-accent); }
-    .form-row textarea { min-height: 120px; resize: vertical; }
-    .contact-form-wrap button[type="submit"] { padding: 1rem 2rem; background: var(--color-accent); color: var(--color-bg); font-weight: 600; font-size: 1rem; border: none; cursor: pointer; font-family: var(--font-body); margin-top: 0.5rem; transition: background 0.2s; }
-    .contact-form-wrap button[type="submit"]:hover { background: var(--color-accent-hover); }
-    .contact-info h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 1rem; color: var(--color-text); }
-    .contact-info p { margin: 0 0 0.5rem; color: var(--color-text-muted); font-size: 0.95rem; }
-    .contact-info a { color: var(--color-accent); font-weight: 500; }
-    .contact-info a:hover { text-decoration: underline; }
-
+    .field-map-section { background: var(--color-bg); }
+    #field-map { width: 100%; height: 500px; min-height: 400px; background: var(--color-surface-elevated); border: 1px solid var(--color-border); margin-top: 1rem; }
+    .field-map-note { margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; }
+    .field-geojson-box { margin-top: 1.5rem; padding: 1rem; background: var(--color-surface); border: 1px solid var(--color-border); font-family: monospace; font-size: 0.8rem; color: var(--color-text-muted); white-space: pre-wrap; word-break: break-all; max-height: 200px; overflow-y: auto; }
+    .field-geojson-box.empty { color: var(--color-text-muted); opacity: 0.7; }
     .cta-block { background: var(--color-surface); padding: var(--section-padding) 0; }
     .cta-block-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; text-align: center; }
     .cta-block .section-title { margin: 0 auto 0.75rem; }
@@ -81,13 +47,11 @@
     .btn-primary:hover { background: var(--color-accent-hover); color: var(--color-bg); }
     .btn-secondary { display: inline-block; padding: 1rem 2rem; background: transparent; color: var(--color-text); font-weight: 600; font-size: 1rem; border: 1px solid var(--color-border); cursor: pointer; transition: border-color 0.2s, color 0.2s; }
     .btn-secondary:hover { border-color: var(--color-text-muted); color: var(--color-text); }
-
     .footer { background: var(--color-surface); border-top: 2px solid var(--color-accent); }
     .footer__top { padding: 3.5rem var(--section-padding) 2.5rem; max-width: var(--container); margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; display: grid; grid-template-columns: 1.5fr 1fr 1.2fr 1fr 1.3fr; gap: 2.5rem 2rem; align-items: start; }
     @media (max-width: 1100px) { .footer__top { grid-template-columns: 1fr 1fr 1fr; } }
     @media (max-width: 700px) { .footer__top { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2.5rem 1.5rem; } }
     @media (max-width: 480px) { .footer__top { grid-template-columns: 1fr; } }
-    .footer__brand .logo { display: inline-block; margin-bottom: 0.5rem; }
     .footer__brand .logo img { height: 36px; width: auto; }
     .footer__brand-tagline { font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.5; margin: 0; max-width: 20rem; }
     .footer__col-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-text-muted); margin: 0 0 1rem; }
@@ -100,14 +64,11 @@
     .footer__contact-item a:hover { color: var(--color-accent); }
     .footer__wa-cta { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; padding: 0.5rem 1rem; background: #25D366; color: #fff; font-size: 0.8125rem; font-weight: 600; border-radius: 50px; transition: background 0.2s, transform 0.2s; }
     .footer__wa-cta:hover { background: #20bd5a; color: #fff; transform: translateY(-1px); }
-    .footer__wa-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
-    .footer__newsletter { margin-top: 0.25rem; }
+    .footer__wa-cta svg { width: 18px; height: 18px; }
     .footer__newsletter-desc { font-size: 0.8125rem; color: var(--color-text-muted); margin: 0 0 0.75rem; line-height: 1.4; }
     .footer__newsletter-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .footer__newsletter-form input { flex: 1; min-width: 140px; padding: 0.6rem 0.75rem; font-family: var(--font-body); font-size: 0.875rem; color: var(--color-text); background: var(--color-bg); border: 1px solid var(--color-border); }
-    .footer__newsletter-form input:focus { outline: none; border-color: var(--color-accent); }
     .footer__newsletter-form button { padding: 0.6rem 1rem; font-family: var(--font-body); font-size: 0.8125rem; font-weight: 600; background: var(--color-accent); color: var(--color-bg); border: none; cursor: pointer; transition: background 0.2s; }
-    .footer__newsletter-form button:hover { background: var(--color-accent-hover); }
     .footer__social-locations { padding: 1.5rem 1.5rem 1.25rem; max-width: var(--container); margin: 0 auto; border-top: 1px solid var(--color-border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
     .footer__social { display: flex; align-items: center; gap: 1rem; }
     .footer__social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--color-border); color: var(--color-text-muted); transition: color 0.2s, border-color 0.2s; }
@@ -121,7 +82,6 @@
     .footer__legal a { color: var(--color-text-muted); }
     .footer__legal a:hover { color: var(--color-text); }
     .footer__copy { font-size: 0.8rem; color: var(--color-text-muted); margin: 0; }
-
     .wa-float { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; pointer-events: none; }
     .wa-float__link { pointer-events: auto; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 56px; height: 56px; padding: 0; background: #25D366; color: #fff; border-radius: 50%; box-shadow: 0 2px 12px rgba(37, 211, 102, 0.35); transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease; }
     .wa-float__link:hover { transform: scale(1.1) translateY(-2px); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5); background: #20bd5a; color: #fff; }
@@ -129,21 +89,9 @@
     .wa-float__icon svg { width: 100%; height: 100%; }
     .wa-float__label { font-size: 0.8125rem; font-weight: 600; white-space: nowrap; padding-right: 0.5rem; }
     @media (min-width: 520px) { .wa-float__link { width: auto; height: auto; min-width: 56px; min-height: 56px; padding: 0 1rem 0 0.6rem; border-radius: 50px; } }
-    @media (max-width: 519px) { .wa-float__label { display: none; } .wa-float { bottom: 1.25rem; right: 1.25rem; } }
+    @media (max-width: 519px) { .wa-float__label { display: none; } }
   </style>
   <link rel="stylesheet" href="assets/css/mobile.css" />
-  <!-- Consent Mode v2: gtag'dan önce yükle -->
-  <script src="assets/js/google-consent.js"></script>
-  <!-- Google tag (Ads): replace AW-XXXXXXXXX with your Google Ads conversion ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXX');
-    // Enhanced Conversions: set your conversion_id and conversion_label from Google Ads > Goals > Conversions
-    window.GOOGLE_ADS_CONFIG = { conversionId: 'AW-XXXXXXXXX', conversionLabel: 'YYYYYYYYY' };
-  </script>
 </head>
 <body>
 
@@ -160,6 +108,7 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="locations.html">Locations</a></li>
+        <li><a href="fields.html">Fields</a></li>
       </ul>
       <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span aria-hidden="true">&#9776;</span></button>
       <a href="contact.html" class="nav-cta">Contact</a>
@@ -169,71 +118,31 @@
   <main>
     <section class="service-hero">
       <div class="hero-inner">
-        <p class="hero-label">Contact</p>
-        <h1 class="hero-headline">Get in touch</h1>
-        <p class="hero-sub">Request a quote, ask a question, or discuss your project. We respond within 24 hours.</p>
+        <p class="hero-label">Field selector</p>
+        <h1 class="hero-headline">Draw your field on the map</h1>
+        <p class="hero-sub">Use the polygon tool to outline your field. The boundary is exported as GeoJSON and can be sent to services/weatherAgro.getSoilDataByGeoJSON() for soil moisture and temperature data (OpenWeather Agro).</p>
       </div>
     </section>
 
-    <div class="trust-bar">
-      <div class="trust-inner">
-        <div class="trust-stat"><strong>Serving Texas</strong> · Fully insured & bonded · OSHA-aligned · Documented compliance</div>
-      </div>
-    </div>
-
-    <section class="contact-section">
+    <section class="section field-map-section">
       <div class="section-inner">
-        <div class="section-head">
-          <p class="section-label">Request a quote or information</p>
-          <h2 class="section-title">Submit your details</h2>
-          <p class="section-sub">We scope, quote, and deliver. Response within 24 hours.</p>
-        </div>
-        <div class="contact-inner">
-          <div class="contact-form-wrap">
-            <h3>Contact form</h3>
-            <form action="contact.html" method="get" id="contact-form">
-              <div class="form-row">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required placeholder="Full name" />
-              </div>
-              <div class="form-row">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" placeholder="Company or organization" />
-              </div>
-              <div class="form-row">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required placeholder="Email" />
-              </div>
-              <div class="form-row">
-                <label for="phone">Phone *</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Phone" />
-              </div>
-              <div class="form-row">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" required placeholder="How can we help? Project scope, timeline, or questions"></textarea>
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-          <div class="contact-info">
-            <h3>Other ways to reach us</h3>
-            <p><a href="https://www.lonestar-agro.com" target="_blank" rel="noopener">www.lonestar-agro.com</a></p>
-            <p><a href="tel:+14023639991">+1 (402) 363-9991</a></p>
-            <p><a href="mailto:contact@lonestar-agro.com">contact@lonestar-agro.com</a></p>
-            <p><a href="https://wa.me/14023639991?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Lonestar%20Agro." target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-            <p style="margin-top: 1rem;">Fully insured & bonded. Serving Texas.</p>
-          </div>
-        </div>
+        <p class="section-label">Map</p>
+        <h2 class="section-title">Select field boundary</h2>
+        <p class="section-sub">Click the polygon icon in the toolbar, then click on the map to add points. Close the shape by clicking the first point. Only one polygon is stored at a time (<code>window.selectedFieldGeoJSON</code>).</p>
+        <div id="field-map" aria-label="Field selection map"></div>
+        <p class="field-map-note">After drawing, the GeoJSON is stored in <code>window.selectedFieldGeoJSON</code> and shown below. Your backend can call <code>getSoilDataByGeoJSON(geoJson, apiKey)</code> from <code>services/weatherAgro.js</code> to fetch soil data for this polygon.</p>
+        <p class="section-label" style="margin-top: 1.5rem;">Selected GeoJSON (for getSoilData)</p>
+        <pre id="field-geojson-output" class="field-geojson-box empty">Draw a polygon to see GeoJSON here.</pre>
       </div>
     </section>
 
     <section class="cta-block">
       <div class="cta-block-inner">
-        <h2 class="section-title">Prefer to talk?</h2>
-        <p class="section-sub">Call us, email, or start a chat on WhatsApp. We respond within 24 hours.</p>
+        <h2 class="section-title">Need help or a quote?</h2>
+        <p class="section-sub">Contact us for soil reports, irrigation planning, or land management services.</p>
         <div class="cta-buttons">
-          <a href="tel:+14023639991" class="btn-primary">Call +1 (402) 363-9991</a>
-          <a href="https://wa.me/14023639991?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Lonestar%20Agro." class="btn-secondary" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          <a href="contact.html" class="btn-primary">Request a Quote</a>
+          <a href="locations.html" class="btn-secondary">Locations</a>
         </div>
       </div>
     </section>
@@ -255,6 +164,7 @@
           <li><a href="safety-compliance.html">Safety & Compliance</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="fields.html">Fields</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -287,14 +197,6 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Chat on WhatsApp
         </a>
-        <div class="footer__newsletter">
-          <p class="footer__col-title">Newsletter</p>
-          <p class="footer__newsletter-desc">Updates on services, projects, and industry insights.</p>
-          <form class="footer__newsletter-form" action="#" method="post" aria-label="Newsletter signup">
-            <input type="email" name="email" placeholder="Your email" required />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
       </div>
     </div>
     <div class="footer__social-locations">
@@ -325,7 +227,33 @@
     </a>
   </div>
 
-  <script src="assets/js/enhanced-conversions.js"></script>
+  <!-- Set GOOGLE_MAPS_API_KEY (Maps JavaScript API + Drawing library). Replace in one place below. -->
+  <script>
+    window.GOOGLE_MAPS_API_KEY = 'YOUR_GOOGLE_MAPS_API_KEY';
+    function initFieldMap() {
+      if (window.FieldSelector && window.FieldSelector.init) {
+        window.FieldSelector.init({ mapContainerId: 'field-map', centerLat: 31.0, centerLng: -99.5, zoom: 6 });
+      }
+    }
+    window.addEventListener('fieldselected', function (e) {
+      var out = document.getElementById('field-geojson-output');
+      if (out && e.detail && e.detail.geoJson) {
+        out.textContent = JSON.stringify(e.detail.geoJson, null, 2);
+        out.classList.remove('empty');
+      }
+    });
+    var key = window.GOOGLE_MAPS_API_KEY || '';
+    if (key && key.indexOf('YOUR_') !== 0) {
+      var s = document.createElement('script');
+      s.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&libraries=drawing&callback=initFieldMap';
+      s.async = true;
+      s.defer = true;
+      document.head.appendChild(s);
+    } else {
+      document.getElementById('field-map').innerHTML = '<p style="padding:2rem;color:var(--color-text-muted);">Set window.GOOGLE_MAPS_API_KEY in this page to your Google Maps JavaScript API key (with Drawing library enabled).</p>';
+    }
+  </script>
+  <script src="assets/js/field-selector.js"></script>
   <script>
     (function() {
       var t = document.querySelector('.nav-toggle');

@@ -696,8 +696,17 @@
     }
   </style>
   <link rel="stylesheet" href="assets/css/mobile.css" />
+  <!-- Consent Mode v2: GTM'den önce yükle -->
+  <script src="assets/js/google-consent.js"></script>
+  <!-- Google Tag Manager: replace GTM-XXXXXX with your GTM container ID -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
+  <!-- Google Tag Manager (noscript): replace GTM-XXXXXX with your container ID -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <header class="nav">
     <div class="nav-inner">
@@ -712,6 +721,7 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="locations.html">Locations</a></li>
+        <li><a href="fields.html">Fields</a></li>
       </ul>
       <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span aria-hidden="true">&#9776;</span></button>
       <a href="contact.html" class="nav-cta">Contact</a>
@@ -1101,6 +1111,15 @@
       </span>
       <span class="wa-float__label">Chat</span>
     </a>
+  </div>
+
+  <!-- Cookie consent banner (Consent Mode v2) -->
+  <div id="cookie-consent-banner" role="dialog" aria-label="Cookie consent" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:1rem 1.5rem;background:#1c1c1c;border-top:1px solid #2a2a2a;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;box-shadow:0 -4px 20px rgba(0,0,0,0.3);">
+    <p style="margin:0;flex:1;min-width:200px;font-size:0.9rem;color:#a3a3a3;">We use cookies for analytics and advertising. By accepting you allow us to use data for a better experience. <a href="privacy.html" style="color:#c9a227;">Privacy</a></p>
+    <div style="display:flex;gap:0.75rem;">
+      <button type="button" onclick="denyGoogleConsent(); document.getElementById('cookie-consent-banner').style.display='none';" style="padding:0.5rem 1rem;background:transparent;color:#a3a3a3;border:1px solid #2a2a2a;cursor:pointer;font-size:0.875rem;">Decline</button>
+      <button type="button" onclick="grantGoogleConsent(); document.getElementById('cookie-consent-banner').style.display='none';" style="padding:0.5rem 1rem;background:#c9a227;color:#0d0d0d;border:none;cursor:pointer;font-size:0.875rem;font-weight:600;">Accept</button>
+    </div>
   </div>
 
   <script>
