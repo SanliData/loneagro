@@ -41,6 +41,19 @@ Planning and content for a premium, enterprise-level agricultural & land managem
 
 ---
 
+## Site overview PDF (investor / management)
+
+To generate a single PDF with screenshots of all main pages (English, main-book style):
+
+```bash
+npm install
+npm run build:pdf
+```
+
+Output: `docs/Lonestar-Agro-Site-Ozeti.pdf` (cover + Home, About Us, Services, etc.).
+
+---
+
 ## Quick start
 
 1. **Architecture & content:** Read `docs/site-architecture.md` and `docs/page-content-structure.md` for structure and sections.

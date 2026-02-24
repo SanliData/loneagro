@@ -1,0 +1,13 @@
+{
+  "name": "lonestar-agro",
+  "description": "Lonestar Agro static site",
+  "private": true,
+  "scripts": {
+    "build:pdf": "node scripts/generate-site-pdf.js",
+    "serve": "npx serve -l 3000"
+  },
+  "devDependencies": {
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^23.0.0"
+  }
+}
