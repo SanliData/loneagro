@@ -136,8 +136,8 @@ The site combines the best elements of:
 
 - Floating button (fixed bottom-right)
 - Pre-filled message: *"Hello, I would like to discuss a project with Lonestar Agro."*
-- **Setup:** Replace `PHONE_NUMBER` in script with full number (e.g. `14023639991`, no + or spaces)
-- Current number in footer/docs: +1 (402) 363-9991 → `14023639991` for wa.me link
+- **Setup:** Replace `PHONE_NUMBER` in script with full number (e.g. `14322547373`, no + or spaces)
+- Current number in footer/docs: +1 (432) 254-7373 → `14322547373` for wa.me link
 
 ---
 

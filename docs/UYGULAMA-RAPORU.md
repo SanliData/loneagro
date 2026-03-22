@@ -112,7 +112,7 @@ Aşağıdakiler harici; sunucu veya sitedeki sayfa varlığından bağımsız:
 
 - `https://fonts.googleapis.com/` — fontlar
 - `https://www.lonestar-agro.com`
-- `tel:+14023639991`, `mailto:contact@lonestar-agro.com`
+- `tel:+14322547373`, `mailto:contact@lonestar-agro.com`
 - `https://wa.me/...`
 - LinkedIn, Twitter/X, Facebook
 

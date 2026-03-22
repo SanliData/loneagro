@@ -40,9 +40,9 @@
 - Municipal & Government, Energy & Utilities, Agriculture & Ranching, Commercial & Corporate, Institutional (all → /industries-served or anchor)
 
 **Column 5 — Contact + WhatsApp CTA + Newsletter**
-- Phone: +1 (402) 363-9991 (tel: link)
+- Phone: +1 (432) 254-7373 (tel: link)
 - Email: contact@lonestar-agro.com
-- **Chat on WhatsApp** (green button, wa.me/14023639991 with predefined message)
+- **Chat on WhatsApp** (green button, wa.me/14322547373 with predefined message)
 - **Newsletter:** heading, short line, email input + Subscribe button (form action TBD)
 
 ---

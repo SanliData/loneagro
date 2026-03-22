@@ -1,6 +1,6 @@
 /**
  * Lonestar Agro — WhatsApp Floating Button (React)
- * Usage: <WhatsAppFloat phone="14023639991" message="Hi, I'm interested in Lonestar Agro services." />
+ * Usage: <WhatsAppFloat phone="14322547373" message="Hi, I'm interested in Lonestar Agro services." />
  */
 
 import React from 'react';
@@ -8,7 +8,7 @@ import React from 'react';
 const DEFAULT_MESSAGE = "Hi, I'm interested in Lonestar Agro services.";
 
 export function WhatsAppFloat({
-  phone = '14023639991',
+  phone = '14322547373',
   message = DEFAULT_MESSAGE,
   label = 'Chat with us',
   className = '',

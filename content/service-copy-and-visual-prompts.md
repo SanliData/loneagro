@@ -1,7 +1,7 @@
 # Lonestar Agro — Servis Metinleri & Görsel Promptları
 
 **Ton:** Texas kökenli, kurumsal, uzman. Profesyonel, güven veren, çözüm odaklı.  
-**İletişim:** www.lonestar-agro.com | +1 (402) 363-9991
+**İletişim:** www.lonestar-agro.com | +1 (432) 254-7373
 
 ---
 
@@ -107,9 +107,9 @@ Aerial view of managed Texas land: clear vegetation zones, maintained edges, hea
 ## İletişim bilgisi (tüm sayfalarda kullanılacak)
 
 - **Web:** www.lonestar-agro.com  
-- **Telefon:** +1 (402) 363-9991  
+- **Telefon:** +1 (432) 254-7373  
 - **E-posta:** contact@lonestar-agro.com  
-- **WhatsApp:** +1 (402) 363-9991  
+- **WhatsApp:** +1 (432) 254-7373  
 
 Contact bölümlerinde bu bilgilerin yer alması önerilir.
 

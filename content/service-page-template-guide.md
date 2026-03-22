@@ -40,7 +40,7 @@
 
 - **Quick contact block:** Same link on every service page.
 - **Predefined message:** `Hello, I would like to discuss a project with Lonestar Agro.`
-- **URL:** `https://wa.me/14023639991?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Lonestar%20Agro.`
+- **URL:** `https://wa.me/14322547373?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Lonestar%20Agro.`
 
 ---
 
