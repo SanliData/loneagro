@@ -17,7 +17,7 @@
       --color-border: #2a2a2a;
       --font-display: 'DM Serif Display', Georgia, serif;
       --font-body: 'Inter', sans-serif;
-      --container: min(800px, 100% - 3rem);
+      --container: min(920px, 100% - 3rem);
     }
     *, *::before, *::after { box-sizing: border-box; }
     body { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.6; color: var(--color-text); background: var(--color-bg); -webkit-font-smoothing: antialiased; padding-top: 80px; }
@@ -28,7 +28,36 @@
     .nav a { color: var(--color-text-muted); font-weight: 500; }
     .nav a:hover { color: var(--color-text); }
     .cv-page { max-width: var(--container); margin: 0 auto; padding: 2rem 1.5rem 4rem; }
-    .cv-back { margin-bottom: 2rem; font-size: 0.9rem; }
+    .cv-back { margin-bottom: 1.5rem; font-size: 0.9rem; }
+    .cv-hero {
+      display: grid;
+      grid-template-columns: min(220px, 42vw) 1fr;
+      gap: 2rem;
+      align-items: start;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .cv-hero-photo { margin: 0; }
+    .cv-hero-photo img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center 25%;
+      border: 1px solid var(--color-border);
+      display: block;
+      background: var(--color-surface);
+    }
+    .cv-hero-intro .cv-name { margin-bottom: 0.25rem; }
+    .cv-hero-intro .cv-title { margin-bottom: 0; }
+    @media (max-width: 640px) {
+      .cv-hero {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+      .cv-hero-photo { max-width: 240px; width: 100%; }
+    }
     .cv-name { font-family: var(--font-display); font-size: 2rem; margin: 0 0 0.25rem; }
     .cv-title { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 2rem; }
     .cv-section { margin-bottom: 2rem; }
@@ -56,8 +85,23 @@
 
   <main class="cv-page">
     <p class="cv-back"><a href="about.html">← Back to About / Leadership</a></p>
-    <h1 class="cv-name">Audrey Dickman</h1>
-    <p class="cv-title">Managing Partner – Field Operations &amp; Execution, Lonestar Agro</p>
+
+    <header class="cv-hero">
+      <figure class="cv-hero-photo">
+        <img
+          src="assets/images/leadership-audrey-dickman.png"
+          alt="Audrey Dickman — field operations and land management, Lonestar Agro"
+          width="440"
+          height="440"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+      <div class="cv-hero-intro">
+        <h1 class="cv-name">Audrey Dickman</h1>
+        <p class="cv-title">Managing Partner – Field Operations &amp; Execution, Lonestar Agro</p>
+      </div>
+    </header>
 
     <section class="cv-section">
       <h2>Education</h2>
