@@ -1,0 +1,12 @@
+# https://lonestar-agro.com
+User-agent: *
+Allow: /
+
+# Internal / tooling (not public site pages)
+Disallow: /docs/
+Disallow: /scripts/
+Disallow: /content/
+Disallow: /templates/
+Disallow: /node_modules/
+
+Sitemap: https://lonestar-agro.com/sitemap.xml
