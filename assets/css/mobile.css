@@ -1,5 +1,45 @@
 /* Mobile-first overrides and responsive nav – load after main styles */
 
+/* ----- Photos: sharper scaling on mobile / high-DPI ----- */
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.case-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sustain-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .leadership-photo {
+    max-width: min(280px, 100%);
+    margin-inline: auto;
+  }
+
+  .cv-hero-photo img {
+    max-width: 100%;
+  }
+}
+
 /* ----- Mobile nav toggle (hidden on desktop) ----- */
 .nav-toggle {
   display: none;
